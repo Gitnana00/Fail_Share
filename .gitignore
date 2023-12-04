@@ -29,3 +29,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+vendor/bundle/
+node_modules/
+*.pyc
+*.o
+*.out
+.DS_Store
+Thumbs.db

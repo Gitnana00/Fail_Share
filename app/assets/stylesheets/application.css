@@ -13,3 +13,72 @@
  *= require_tree .
  *= require_self
  */
+/* ピクセルフォントのインポート */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* タイトルスタイル */
+.signup-title {
+  color: #ff79c6; /* ピンクのタイトル */
+  text-align: center;
+  font-family: 'Press Start 2P', cursive; /* ピクセルフォント */
+}
+
+/* フォームスタイル */
+.signup-form {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 0; /* 角を丸くしない */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* フォームの最大幅 */
+  margin: 20px auto; /* 上下左右のマージンを均等に設定 */
+}
+
+/* 入力フィールドスタイル */
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0; /* 角を丸くしない */
+  border: 2px solid #ccc; /* ピクセル風のボーダー */
+  font-family: 'Press Start 2P', cursive; /* ピクセルフォント */
+  font-size: 12px; /* フォントサイズの調整 */
+}
+
+/* フィールドスタイル */
+.field {
+  margin-bottom: 15px;
+}
+
+/* ラベルスタイル */
+.label {
+  font-family: 'Press Start 2P', cursive; /* ピクセルフォント */
+  color: #333;
+  font-size: 12px;
+}
+
+/* パスワード長さヒントスタイル */
+.password-length {
+  font-family: 'Press Start 2P', cursive; /* ピクセルフォント */
+  font-size: 10px; /* サイズを小さく */
+  color: #666;
+}
+
+/* ボタンスタイル */
+.signup-button {
+  font-family: 'Press Start 2P', cursive; /* ピクセルフォント */
+  background-color: #ff79c6; /* ピンクのボタン */
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid black; /* ピクセル風のボーダー */
+  border-radius: 0; /* 角を丸くしない */
+  cursor: pointer;
+  font-size: 12px; /* フォントサイズの調整 */
+  text-transform: uppercase; /* 大文字に変換 */
+  transition: all 0.3s ease; /* スムーズなホバーエフェクト */
+}
+
+/* ホバー時のボタンスタイル */
+.signup-button:hover {
+  background-color: #ff92d0; /* 明るいピンク */
+  transform: scale(1.05); /* 少し大きく */
+}
+
