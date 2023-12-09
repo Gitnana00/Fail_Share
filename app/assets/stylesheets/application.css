@@ -14,7 +14,7 @@
   margin-top: -50px; /* 上に50px移動させる */
 }
 
-#signup-video {
+#signup-video, #login-video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -94,7 +94,7 @@
 
 .game-header {
   background-color:#0073a8; 
-  padding: 1rem;
+  padding: 0.5rem;
   font-family: 'DotGothic16', cursive;
   color: #ff79c6;
   width: 100%;
@@ -137,4 +137,38 @@
   border-color: #ffffff; /* ホバー時のボーダー色 */
   color: #ffffff;
   transform: scale(1.1); /* ホバー時に少し大きく */
+}
+
+.game-footer {
+  background-color: #0073a8; 
+  ccolor: #ffffff;
+  text-align: center;
+  padding: 0.5rem 0;
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  box-sizing: border-box; 
+  z-index: 10; 
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-link {
+  color: #ff79c6;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #ff79c6;
+  font-size: 1rem;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.footer-link:hover {
+  background-color: #ff79c6;
+  color: #ffffff;
+  border-color: #ffffff;
 }
