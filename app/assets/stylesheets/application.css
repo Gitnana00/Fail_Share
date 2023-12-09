@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 /* フレックスコンテナスタイル */
 .flex-container {
@@ -10,6 +11,7 @@
   position: relative; /* 動画を正しく配置するための相対位置指定 */
   z-index: 1; /* 動画より上に配置 */
   background-color: #f8f8f8; /* コンテナの背景色を薄いグレーに設定 */
+  margin-top: -50px; /* 上に50px移動させる */
 }
 
 #signup-video {
@@ -78,7 +80,7 @@
   border-radius: 0; /* 角を丸くしない */
   padding: 8px 16px;
   text-transform: uppercase; /* 大文字に変換 */
-  font-size: 12px; /* 小さめのフォントサイズ */
+  font-size: 16px; /* 小さめのフォントサイズ */
   cursor: pointer;
   transition: all 0.3s ease; /* スムーズなホバーエフェクト */
 }
@@ -87,4 +89,52 @@
 .signup-button:hover, .login-button:hover {
   background-color: #ff92d0; /* 明るいピンク */
   transform: scale(1.1); /* 少し大きく */
+}
+
+
+.game-header {
+  background-color:#0073a8; 
+  padding: 1rem;
+  font-family: 'DotGothic16', cursive;
+  color: #ff79c6;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10; /* 他の要素より前に表示 */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo a {
+  color: #ff79c6;
+  text-decoration: none;
+  font-size: 2rem; /* ロゴのフォントサイズを調整 */
+  font-family: 'Press Start 2P'
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.header-nav a {
+  color: #ff79c6;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #ff79c6;
+  font-size: 1rem; /* ナビゲーションリンクのフォントサイズを調整 */
+}
+
+.header-nav a:hover {
+  background-color: #ff79c6; /* ホバー時の背景色 */
+  border-color: #ffffff; /* ホバー時のボーダー色 */
+  color: #ffffff;
+  transform: scale(1.1); /* ホバー時に少し大きく */
 }
