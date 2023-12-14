@@ -6,9 +6,14 @@
     <nav class="header-nav">
       <ul>
         <li><a href="#">投稿作成</a></li>
-        <li><%= link_to '失敗投稿一覧', posts_path %></li>
+        <li><%= link_to '投稿一覧', posts_path %></li>
         <li><a href="#">ランキング</a></li>
+        <% if user_signed_in? %>
         <li><a href="#">マイページ</a></li>
+        <% end %>
+        <% if user_signed_in? %>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
