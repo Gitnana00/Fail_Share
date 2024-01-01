@@ -9,7 +9,7 @@ class Post < ApplicationRecord
 
   validates :title, presence: true, length: { maximum: 255 }
   validates :content, presence: true, length: { maximum: 65535 }
-  validates :public_private, inclusion: { in: [true, false] }
+  validates :private, inclusion: { in: [true, false] }
   validates :anonymous, inclusion: { in: [true, false] }
 
   private
