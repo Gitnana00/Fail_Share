@@ -37,8 +37,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
+    post = Post.find(params[:id])
+    post.destroy!
     redirect_to posts_url, notice: '削除完了だよ！'
   end
 

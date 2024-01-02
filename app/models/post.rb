@@ -12,11 +12,4 @@ class Post < ApplicationRecord
   validates :private, inclusion: { in: [true, false] }
   validates :anonymous, inclusion: { in: [true, false] }
 
-  private
-
-  def set_default_values
-    self.image ||= false
-    self.public_private ||= false
-    self.anonymous ||= false
-  end
 end

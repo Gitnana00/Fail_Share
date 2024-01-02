@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for fail-share00-broken-night-6487-bold-forest-5751 on 2023-12-31T16:32:39+09:00
+# fly.toml app configuration file generated for fail-share00-broken-night-6487-bold-forest-5751-bold-silence-6096-damp-forest-4810-still-mountain-8403 on 2024-01-01T22:23:34+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "fail-share00-broken-night-6487-bold-forest-5751"
+app = "fail-share00-broken-night-6487-bold-forest-5751-bold-silence-6096-damp-forest-4810-still-mountain-8403"
 primary_region = "nrt"
 
 [build]
