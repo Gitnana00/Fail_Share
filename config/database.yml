@@ -81,7 +81,9 @@ test:
 #
 production:
   <<: *default
-  database: app_production
+  database: fail_share
   port: 5433
-  username: app
+  username: fail_share
   password: <%= ENV["APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
