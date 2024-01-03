@@ -1,0 +1,24 @@
+<div class="post">
+  <% if post.image.present? %>
+    <%= image_tag(post.image.url) %>
+  <% end %>
+
+  <h3><%= post.title %></h3>
+  <p><%= post.content %></p>
+
+  <% if post.anonymous %>
+    <p>投稿者: 匿名</p>
+  <% else %>
+    <p>投稿者: <%= post.user.email %></p>
+  <% end %>
+
+  <% if post.public_private %>
+    <p>この投稿はプライベートです。</p>
+  <% else %>
+    <p>この投稿は公開されています。</p>
+  <% end %>
+
+  <% if post.tags_id.present? %>
+    <p>タグID: <%= post.tags_id %></p>
+  <% end %>
+</div>

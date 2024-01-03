@@ -59,6 +59,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 8000 }
+  config.hosts << "fail-share00-broken-night-6487-bold-forest-5751.fly.dev"
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

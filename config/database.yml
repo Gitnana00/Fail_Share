@@ -82,5 +82,6 @@ test:
 production:
   <<: *default
   database: app_production
+  port: 5433
   username: app
   password: <%= ENV["APP_DATABASE_PASSWORD"] %>

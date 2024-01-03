@@ -133,17 +133,17 @@
 }
 
 .header-nav a:hover {
-  background-color: #ff79c6; /* ホバー時の背景色 */
-  border-color: #ffffff; /* ホバー時のボーダー色 */
+  background-color: #ff79c6;
+  border-color: #ffffff;
   color: #ffffff;
-  transform: scale(1.1); /* ホバー時に少し大きく */
+  transform: scale(1.1);
 }
 
 .game-footer {
   background-color: #0073a8; 
-  ccolor: #ffffff;
+  color: #ffffff;
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 1.2rem 0;
   position: fixed; 
   bottom: 0; 
   left: 0; 
@@ -171,4 +171,79 @@
   background-color: #ff79c6;
   color: #ffffff;
   border-color: #ffffff;
+}
+
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+#posts-background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px; 
+}
+
+.post {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+  font-family: 'DotGothic16', sans-serif;
+  color: #ff79c6;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.post p {
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.post p:nth-child(3) {
+  font-size: 0.9rem;
+  color: #0073a8;
+  text-align: right;
+}
+
+.post p:nth-child(4) {
+  font-size: 0.8rem;
+  color: #ff79c6;
+  text-align: right;
+}
+
+.post p:nth-child(5) {
+  font-size: 0.8rem;
+  color: #719bad;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .posts {
+    grid-template-columns: 1fr;
+  }
 }
