@@ -1,49 +1,60 @@
-<h1>New_Post</h1>
-
-<%= form_with model: @post, local: true, html: { multipart: true } do |form| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> が検出されました:</h2>
-
-      <ul>
-      <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="flex-container">
+  <div class="post-form-content">
+    <div class="video-background">
+      <video autoplay muted loop id="post-form-video">
+        <source src="<%= asset_path('board_index_background.mp4') %>" type="video/mp4">
+        お使いのブラウザはビデオをサポートしていません。
+      </video>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+    <h1>New_Post</h1>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
+    <%= form_with model: @post, local: true, html: { multipart: true } do |form| %>
+      <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@post.errors.count, "error") %> が検出されました:</h2>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
+          <ul>
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div class="field">
-    <%= form.label :private %>
-    <%= form.check_box :private %>
-  </div>
+      <div class="field">
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+      </div>
 
-  <div class="field">
-    <%= form.label :anonymous %>
-    <%= form.check_box :anonymous %>
-  </div>
+      <div class="field">
+        <%= form.label :content %>
+        <%= form.text_area :content %>
+      </div>
 
-  <div class="field">
-    <%= form.label :tags_id %>
-    <%= form.number_field :tags_id %>
-  </div>
+      <div class="field">
+        <%= form.label :image %>
+        <%= form.file_field :image %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit "投稿する" %>
+      <div class="field">
+        <%= form.label :private %>
+        <%= form.check_box :private %>
+      </div>
+
+      <div class="field">
+        <%= form.label :anonymous %>
+        <%= form.check_box :anonymous %>
+      </div>
+
+      <div class="field">
+        <%= form.label :tags_id %>
+        <%= form.number_field :tags_id %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "投稿する" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
