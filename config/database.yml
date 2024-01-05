@@ -85,5 +85,5 @@ production:
   port: 5433
   username: fail_share
   password: <%= ENV["APP_DATABASE_PASSWORD"] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  url: http://runteq.jp
 
