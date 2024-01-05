@@ -1,12 +1,12 @@
 databases:
-  - name: fail_share
-    databaseName: fail_share
-    user: fail_share
+  - name: Fail_Share
+    databaseName: Fail_Share
+    user: Fail_Share
     region: singapore
 
 services:
   - type: web
-    name: fail_share
+    name: Fail_Share
     env: ruby
     region: singapore
     plan: free
