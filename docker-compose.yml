@@ -11,12 +11,13 @@ services:
       - '5433:5432'
   web:
     build: .
-
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/app
     ports:
       - '3000:3000'
+    environment:
+      DATABASE_URL: postgres://fail_share:n4dUGlaNS649ouguFFlfc7cmykpBAZF5@dpg-cma150n109ks73cl8430-a.singapore-postgres.render.com/fail_share_4fou
 
     depends_on:
       - db
