@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post.destroy!
-    redirect_to posts_url, notice: '削除完了だよ！'
+    redirect_to posts_path, notice: '削除完了だよ！', status: :see_other
   end
 
   private

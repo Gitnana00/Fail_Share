@@ -6,11 +6,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* ビューポートの高さに合わせる */
+  min-height: auto; /* ビューポートの高さに合わせる */
   position: relative; /* 動画を正しく配置するための相対位置指定 */
   z-index: 1; /* 動画より上に配置 */
   background-color: #f8f8f8; /* コンテナの背景色を薄いグレーに設定 */
   margin-top: -50px; /* 上に50px移動させる */
+  overflow-y: auto;
+  padding-top: 120px;
+  padding-bottom: 100px;
 }
 
 #signup-video, #login-video, #post-form-video {
@@ -173,7 +176,7 @@
 }
 
 .video-background {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -189,10 +192,10 @@
 
 .posts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px;
-  padding: 20px;
-  max-width: 800px; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 50px;
+  padding: 70px;
+  max-width: 1600px; 
 }
 
 .post {

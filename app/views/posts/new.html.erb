@@ -7,7 +7,7 @@
       </video>
     </div>
 
-    <h1>New_Post</h1>
+    <h1 class="signup-title">New Post</h1>
 
     <%= form_with model: @post, local: true, html: { multipart: true } do |form| %>
       <% if @post.errors.any? %>
@@ -23,37 +23,37 @@
       <% end %>
 
       <div class="field">
-        <%= form.label :title %>
-        <%= form.text_field :title %>
+        <%= form.label :title, class: 'label' %>
+        <%= form.text_field :title, class: 'input' %>
       </div>
 
       <div class="field">
-        <%= form.label :content %>
-        <%= form.text_area :content %>
+        <%= form.label :content, class: 'label' %>
+        <%= form.text_area :content, class: 'input' %>
       </div>
 
       <div class="field">
-        <%= form.label :image %>
-        <%= form.file_field :image %>
+        <%= form.label :image, class: 'label' %>
+        <%= form.file_field :image, class: 'input' %>
       </div>
 
       <div class="field">
-        <%= form.label :private %>
-        <%= form.check_box :private %>
+        <%= form.label :private, class: 'label' %>
+        <%= form.check_box :private, class: 'input' %>
       </div>
 
       <div class="field">
-        <%= form.label :anonymous %>
-        <%= form.check_box :anonymous %>
+        <%= form.label :anonymous, class: 'label' %>
+        <%= form.check_box :anonymous, class: 'input' %>
       </div>
 
       <div class="field">
-        <%= form.label :tags_id %>
-        <%= form.number_field :tags_id %>
+        <%= form.label :tags_id, class: 'label' %>
+        <%= form.number_field :tags_id, class: 'input' %>
       </div>
 
       <div class="actions">
-        <%= form.submit "投稿する" %>
+        <%= form.submit "POST", class: 'signup-button' %>
       </div>
     <% end %>
   </div>
