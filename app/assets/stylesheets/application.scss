@@ -2,16 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
-/* フレックスコンテナスタイル */
 .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* ビューポートの高さに合わせる */
+  min-height: auto; /* ビューポートの高さに合わせる */
   position: relative; /* 動画を正しく配置するための相対位置指定 */
   z-index: 1; /* 動画より上に配置 */
   background-color: #f8f8f8; /* コンテナの背景色を薄いグレーに設定 */
   margin-top: -50px; /* 上に50px移動させる */
+  overflow-y: auto;
+  padding-top: 120px;
+  padding-bottom: 100px;
 }
 
 #signup-video, #login-video, #post-form-video {
@@ -90,7 +92,6 @@
   background-color: #ff92d0; /* 明るいピンク */
   transform: scale(1.1); /* 少し大きく */
 }
-
 
 .game-header {
   background-color:#0073a8; 
@@ -174,7 +175,7 @@
 }
 
 .video-background {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -190,10 +191,10 @@
 
 .posts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px;
-  padding: 20px;
-  max-width: 800px; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 50px;
+  padding: 70px;
+  max-width: 1600px; 
 }
 
 .post {
@@ -234,6 +235,49 @@
   font-size: 0.8rem;
   color: #719bad;
   text-align: right;
+}
+
+.search-form {
+  font-family: 'DotGothic16', cursive; // ピクセルフォントを適用
+  background: #fff; // 背景色を白に
+  border: 3px solid #ff79c6; // ピンクのボーダー
+  padding: 0.5em; // 内側の余白
+  border-radius: 0.5em; // 角を丸く
+  box-shadow: 3px 3px #ccc; // 影をつける
+  margin: 1em 0; // 上下の余白
+  display: inline-block; // インラインブロック要素に
+}
+
+.search-form input[type="text"] {
+  border: 2px solid #ff79c6; // 入力欄のボーダー
+  background: #f9f9f9; // 入力欄の背景色
+  color: #333; // テキストの色
+  padding: 0.5em; // 内側の余白
+  border-radius: 0.5em; // 角を丸く
+}
+
+.search-form input[type="submit"] {
+  font-family: 'Press Start 2P', sans-serif;
+  background: #ff79c6; // ボタンの背景色
+  color: #fff; // ボタンのテキスト色
+  padding: 0.5em 1em; // 内側の余白
+  border: none; // ボーダーなし
+  border-radius: 0.5em; // 角を丸く
+  box-shadow: 2px 2px #ccc; // 影をつける
+  cursor: pointer; // ホバー時のカーソルを指に
+}
+
+// レスポンシブ対応
+@media (max-width: 768px) {
+  .search-form {
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+
+  .search-form input[type="text"],
+  .search-form input[type="submit"] {
+    padding: 0.5em;
+  }
 }
 
 @media (max-width: 768px) {

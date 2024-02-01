@@ -5,7 +5,13 @@
   </video>
 </div>
 
-<h1>投稿一覧</h1>
+<h1>Post index</h1>
+<%= search_form_for @q do |f| %>
+  <div class="search-form">
+    <%= f.search_field :title_cont, placeholder: 'タイトル', class: 'search-input' %>
+    <%= f.submit "Search", class: 'search-button' %>
+  </div>
+<% end %>
 
 <div class="posts">
   <%= render partial: "posts/post", collection: @posts %>

@@ -12,4 +12,9 @@ class Post < ApplicationRecord
   validates :private, inclusion: { in: [true, false] }
   validates :anonymous, inclusion: { in: [true, false] }
 
+  def self.ransackable_attributes(auth_object = nil)
+    # 検索に含めたい属性を配列で指定する
+    ['title', 'content', 'created_at', 'updated_at', 'tags_id', 'user_id']
+  end
+
 end

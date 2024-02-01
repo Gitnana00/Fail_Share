@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :posts, only: [:index, :new, :create, :show, :edit, :update, :destroy]
-  
+
+  get '/terms', to: 'static_pages#terms'
+  get '/privacy', to: 'static_pages#privacy'
 end

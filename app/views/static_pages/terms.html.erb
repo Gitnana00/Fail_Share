@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fail Share 利用規約</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <style>
+
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+  }
+
+  #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  .container {
+    position: relative; 
+    z-index: 1; 
+  }
+
+    body {
+      padding-top: 50px;
+      background-color: #f8f8f8;
+      font-family: 'DotGothic16', sans-serif;
+      padding-bottom:30px;
+    }
+    
+    h1, h2 {
+      font-family: 'Press Start 2P', cursive;
+      color: #ff79c6;
+      text-align: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    ul, p {
+      color: #0073a8;
+    }
+
+    a {
+      color: #ff92d0;
+    }
+
+    a:hover {
+      color: #ff79c6;
+    }
+
+    footer {
+      color: #0073a8;
+      font-size: 0.8em;
+      text-align: center;
+    }
+
+    /* 追加のスタイル */
+    section {
+      padding-left: 1em; 
+    }
+
+    .section-number {
+      font-family: 'DotGothic16', sans-serif;
+    }
+
+    .section-title {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    h2 {
+      text-align: left;
+      padding-left: 0; 
+    }
+
+    ul {
+      padding-left: 1.5em; 
+      list-style-type: disc; 
+    }
+
+    ul li {
+      text-align: left; 
+    }
+
+    p {
+      text-align: left;
+      padding-left: 0; 
+    }
+  </style>
+</head>
+<body>
+
+<div class="video-background">
+  <video autoplay muted loop id="posts-background-video">
+    <source src="<%= asset_path('board_index_background.mp4') %>" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+  <div class="container mt-5">
+    <h1>Fail Share</h1>
+    <h1>利用規約</h1>
+    
+    <section class="mb-5">
+      <h2><span class="section-number">1.</span><span class="section-title">サービス概要</span></h2>
+      <p>「Fail Share」は、プログラミング学習中における失敗の投稿を通し、失敗に慣れ、挫折しにくいマインドを形成するサービスです。</p>
+    </section>
+
+    <section class="mb-5">
+      <h2><span class="section-number">2.</span><span class="section-title">想定されるユーザー層</span></h2>
+      <ul>
+        <li>プログラミング学習者</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2><span class="section-number">3.</span><span class="section-title">サービスコンセプト</span></h2>
+      <p>「Fail Share」は、失敗投稿機能を通じ、学習段階で失敗を経験するのは当然のことだということをユーザーに気づかせ、学習中のモチベーションを維持させます。</p>
+    </section>
+
+    <section class="mb-5">
+      <h2><span class="section-number">4.</span><span class="section-title">利用規約の適用</span></h2>
+      <p>本規約は、ユーザーが「Fail Share」を利用する際に適用されます。</p>
+    </section>
+
+    <section class="mb-5">
+      <h2><span class="section-number">5.</span><span class="section-title">アカウント登録</span></h2>
+      <p>ユーザーは、自身の責任のもとでアカウントを登録・管理する必要があります。</p>
+    </section>
+
+    <section class="mb-5">
+      <h2><span class="section-number">6.</span><span class="section-title">禁止事項</span></h2>
+      <p>ユーザーは、以下の行為を行ってはなりません。</p>
+      <ul>
+        <li>法令または公序良俗に違反する行為</li>
+        <li>他のユーザーの権利を侵害する行為</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2><span class="section-number">7.</span><span class="section-title">免責事項</span></h2>
+      <p>「Fail Share」は、サービスの利用に関連してユーザーに生じた損害について、一切の責任を負いません。</p>
+    </section>
+
+    <section class="mb-5">
+      <h2><span class="section-number">8.</span><span class="section-title">規約の変更</span></h2>
+      <p>「Fail Share」は、必要に応じて本規約を変更することがあります。</p>
+    </section>
+
+    <section class="mb-5">
+      <h2><span class="section-number">9.</span><span class="section-title">連絡先</span></h2>
+      <p>利用規約に関するお問い合わせは、以下のメールアドレスまでご連絡ください。<br>E-mail:0818uzimihs@gmail.com</p>
+    </section>
+  </div>
+
+  <footer class="mt-5">
+    <p>&copy; 2023 Fail Share. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

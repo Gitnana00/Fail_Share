@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fail Share プライバシーポリシー</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <style>
+
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+  }
+
+  #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+    .container {
+      padding-top: 100px;
+      margin-top: 0;
+      padding-bottom: 70px;
+      position: relative; 
+      z-index: 1; 
+    }
+
+    body {
+      padding-top: 50px;
+      background-color: #f8f8f8;
+      font-family: 'DotGothic16', sans-serif;
+      padding-bottom:30px;
+    }
+
+    h1, h2 {
+      font-family: 'Press Start 2P', cursive;
+      color: #ff79c6;
+      text-align: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    ul, p {
+      color: #0073a8;
+    }
+
+    a {
+      color: #ff92d0;
+    }
+
+    a:hover {
+      color: #ff79c6;
+    }
+
+    footer {
+      color: #0073a8;
+      font-size: 0.8em;
+      text-align: center;
+    }
+
+    /* 追加のスタイル */
+    section {
+      padding-left: 1em; 
+    }
+
+    .section-number {
+      font-family: 'DotGothic16', sans-serif;
+    }
+
+    .section-title {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    h2 {
+      text-align: left;
+      padding-left: 0; 
+    }
+
+    ul {
+      padding-left: 1.5em; 
+      list-style-type: disc; 
+    }
+
+    ul li {
+      text-align: left; 
+    }
+
+    p {
+      text-align: left;
+      padding-left: 0; 
+    }
+  </style>
+</head>
+<body>
+
+<div class="video-background">
+  <video autoplay muted loop id="background-video">
+    <source src="<%= asset_path('board_index_background.mp4') %>" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+<div class="container mt-5">
+  <h1>Fail Share</h1>
+  <h1>プライバシーポリシー</h1>
+
+  <section class="mb-5">
+    <h2><span class="section-number">1.</span><span class="section-title">個人情報の収集と利用について</span></h2>
+    <p>「Fail Share」（以下、「当サービス」と言います）は、プログラミング学習の過程でユーザーが経験する様々な失敗を共有し、サポートするプラットフォームです。ユーザーが当サービスを利用する際、ユーザー登録、ログイン、投稿、コメントなどの機能を提供するために必要な範囲で個人情報を収集します。当サービスで収集する個人情報は、以下の目的にのみ使用されます。</p>
+    <ul>
+      <li>ユーザー登録および認証</li>
+      <li>投稿された内容の管理と公開</li>
+      <li>ユーザー間のコミュニケーションの促進</li>
+      <li>サービス改善のための分析とフィードバック</li>
+      <li>不正行為の防止とシステムセキュリティの強化</li>
+    </ul>
+  </section>
+
+  <section class="mb-5">
+    <h2><span class="section-number">2.</span><span class="section-title">個人情報の第三者提供について</span></h2>
+    <p>当サービスは、ユーザーの個人情報をユーザーの同意なく第三者に提供することはありません。ただし、法令に基づく要請がある場合やユーザーの安全を保護するために必要と判断される場合には、この限りではありません。</p>
+  </section>
+
+  <section class="mb-5">
+    <h2><span class="section-number">3.</span><span class="section-title">個人情報の安全管理について</span></h2>
+    <p>当サービスは、収集した個人情報の紛失、破壊、改ざん、漏洩などを防ぐために適切な安全対策を講じます。また、個人情報の取り扱いに関しては、常に法令を遵守し、適切な管理を行います。</p>
+  </section>
+
+  <section class="mb-5">
+    <h2><span class="section-number">4.</span><span class="section-title">クッキーの使用について</span></h2>
+    <p>当サービスでは、ユーザーの利便性向上のためにクッキーを使用することがあります。ユーザーはブラウザの設定によりクッキー（Cookie）の使用を管理することができますが、クッキーを無効にした場合、一部のサービスが利用できなくなる可能性があります。</p>
+  </section>
+
+  <section class="mb-5">
+    <h2><span class="section-number">5.</span><span class="section-title">プライバシーポリシーの変更について</span></h2>
+    <p>当サービスは、必要に応じて本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、当サービス上に公開された時点で効力を発揮します。</p>
+  </section>
+
+  <section class="mb-5">
+    <h2><span class="section-number">6.</span><span class="section-title">お問い合わせ</span></h2>
+    <p>プライバシーポリシーに関するお問い合わせは、以下のメールアドレスまでご連絡ください。<br>E-mail:0818uzimihs@gmail.com</p>
+  </section>
+
+  <p>最終更新日: 2024年1月11日</p>
+</div>
+
+<footer class="mt-5">
+  <p>&copy; 2024 Fail Share. All rights reserved.</p>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
