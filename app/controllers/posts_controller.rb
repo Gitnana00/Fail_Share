@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all.includes(:user).order(created_at: :desc)
+    # Ransackの検索オブジェクトを作成
+    @q = Post.ransack(params[:q])
+    # 検索結果を取得し、作成日時の降順で並び替える
+    @posts = @q.result.includes(:user).order(created_at: :desc)
   end
 
   def new
@@ -45,6 +48,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, :image, :private, :anonymous, :tags_id)
+    params.require(:post).permit(:title, :content, :image, :private, :anonymous, :tag_ids => [])
   end
 end
