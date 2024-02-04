@@ -18,6 +18,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
