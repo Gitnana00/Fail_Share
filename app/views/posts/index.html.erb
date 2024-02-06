@@ -6,11 +6,12 @@
 </div>
 
 <h1>Post index</h1>
-<%= search_form_for @q do |f| %>
-  <div class="search-form">
-    <%= f.search_field :title_cont, placeholder: 'タイトル', class: 'search-input' %>
-    <%= f.submit "Search", class: 'search-button' %>
+<%= search_form_for @q, html: { data: { controller: "autocomplete", autocomplete_url_value: "/posts/search", autocomplete_min_length_value: "3" } } do |f| %>
+  <div class="search-form" role="combobox">
+    <%= f.text_field :title_cont, placeholder: 'タイトル', class: 'search-input', data: { autocomplete_target: "input" } %>
+    <ul class="list-group" data-autocomplete-target="results" style="max-height: 10rem; overflow-y: scroll;"></ul>
   </div>
+  <%= f.submit "Search", class: 'search-button' %>
 <% end %>
 
 <div class="posts">

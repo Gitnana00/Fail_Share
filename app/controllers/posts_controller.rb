@@ -45,6 +45,13 @@ class PostsController < ApplicationController
     redirect_to posts_path, notice: '削除完了だよ！', status: :see_other
   end
 
+  def search
+    query = params[:q][:title_cont]
+    @posts = Post.ransack(title_cont: query).result(distinct: true)
+    # 応答としてHTMLフラグメントを返す
+    render partial: 'posts/search_results', locals: { posts: @posts }
+  end
+
   private
 
   def post_params
