@@ -3,7 +3,7 @@
     <%= image_tag(post.image.url) %>
   <% end %>
 
-  <h3><%= post.title %></h3>
+  <h3><%= link_to post.title, post_path(post), class: 'post-title' %></h3>
   <p><%= post.content %></p>
 
   <% if post.anonymous %>
@@ -23,6 +23,6 @@
   <% end %>
 
   <% if current_user == post.user %>
-    <%= link_to '削除', post_path(post), "data-turbo-method": :delete, "data-turbo-confirm": '本当に削除しますか？', class: 'delete-button' %>
+    <%= link_to '削除', post_path(post), "data-turbo-method": :delete, "data-turbo-confirm": '本当に削除する？', class: 'delete-button' %>
   <% end %>
 </div>
