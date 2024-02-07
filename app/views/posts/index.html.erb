@@ -1,19 +1,23 @@
-<div class="video-background">
-  <video autoplay muted loop id="posts-background-video">
-    <source src="<%= asset_path('board_index_background.mp4') %>" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
-</div>
+<div class="flex-container">
+  <div class="post-form-content">
+    <div class="video-background">
+      <video autoplay muted loop id="post-form-video">
+        <source src="<%= asset_path('board_index_background.mp4') %>" type="video/mp4">
+        お使いのブラウザはビデオをサポートしていません。
+      </video>
+    </div>
 
-<h1>Post index</h1>
-<%= search_form_for @q, html: { data: { controller: "autocomplete", autocomplete_url_value: "/posts/search", autocomplete_min_length_value: "3" } } do |f| %>
-  <div class="search-form" role="combobox">
-    <%= f.text_field :title_cont, placeholder: 'タイトル', class: 'search-input', data: { autocomplete_target: "input" } %>
-    <ul class="list-group" data-autocomplete-target="results" style="max-height: 10rem; overflow-y: scroll;"></ul>
+    <%= search_form_for @q, html: { data: { controller: "autocomplete", autocomplete_url_value: "/posts/search", autocomplete_min_length_value: "3" } } do |f| %>
+      <div class="search-form" role="combobox">
+        <%= f.text_field :title_cont, placeholder: 'タイトル', class: 'search-input', data: { autocomplete_target: "input" } %>
+        <ul class="list-group" data-autocomplete-target="results" style="max-height: 10rem; overflow-y: scroll;"></ul>
+      </div>
+      <%= f.submit "検索", class: 'search-button' %>
+    <% end %>
+
+    <div class="posts">
+      <%= render partial: "posts/post", collection: @posts %>
+    </div>
   </div>
-  <%= f.submit "Search", class: 'search-button' %>
-<% end %>
-
-<div class="posts">
-  <%= render partial: "posts/post", collection: @posts %>
 </div>
+

@@ -237,47 +237,129 @@
   text-align: right;
 }
 
+/* 全体のフォントと背景 */
+body {
+  font-family: 'DotGothic16', sans-serif;
+  background-color: #f8f8f8; /* 薄いグレーの背景 */
+}
+
+/* カードスタイルのカスタマイズ */
+.card {
+  max-width: 200%;
+  border-radius: 1rem; /* 角を丸くする */
+  border: none; /* ボーダーを消す */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* やわらかい影 */
+  overflow: hidden; /* はみ出した画像を隠す */
+}
+
+.card-img-top {
+  height: 600px; /* 画像の高さを固定 */
+  object-fit: cover; /* 画像がカードの幅に合うようにする */
+  width: 100%;
+}
+
+.card-body {
+  padding: 2rem;
+  background-color: #fff; /* 白い背景 */
+}
+
+.card-title {
+  font-size: 2rem;
+  color: #ff79c6; /* タイトルをピンク色に */
+  font-family: 'DotGothic16', cursive;
+}
+
+.card-text {
+  font-size: 1.25rem;
+  color: #333; /* 濃いテキストカラー */
+}
+
+.text-muted {
+  color: #719bad; /* 薄いテキストカラー */
+}
+
+/* コメントセクション */
+.comments-section h2 {
+  font-family: 'DotGothic16', cursive;
+  color: #ff79c6; /* セクションタイトルをピンク色に */
+}
+
+/* コメントカード */
+.comments-section .card {
+  margin-bottom: 1rem; /* 下余白を設定 */
+  background-color: #ffeff6; /* コメントの背景をパステルピンクに */
+}
+
+.comments-section .card-body {
+  border-radius: 0.5rem; /* コメントの角を丸くする */
+}
+
+/* コメントフォームスタイル */
+/* 以下にフォームスタイルを追加する場合の例 */
+.comment-form {
+  margin-top: 2rem; /* コメントフォームの上余白 */
+}
+
+.comment-form input,
+.comment-form textarea {
+  border-radius: 0.5rem; /* フォームの要素の角を丸くする */
+  border: 2px solid #ff79c6; /* ボーダーをピンクに */
+}
+
+.comment-form button {
+  background-color: #ff79c6; /* 送信ボタンをピンクに */
+  color: white; /* ボタンテキストを白に */
+  border-radius: 0.5rem; /* ボタンの角を丸くする */
+  padding: 0.5rem 1rem; /* ボタンのパディング */
+  border: none; /* ボーダーを消す */
+}
+
+.comment-form button:hover {
+  background-color: #ff92d0; /* ホバー時のボタン色を明るいピンクに */
+}
+
+/* 検索フォームのスタイル */
 .search-form {
-  font-family: 'DotGothic16', cursive; // ピクセルフォントを適用
-  background: #fff; // 背景色を白に
-  border: 3px solid #ff79c6; // ピンクのボーダー
-  padding: 0.5em; // 内側の余白
-  border-radius: 0.5em; // 角を丸く
-  box-shadow: 3px 3px #ccc; // 影をつける
-  margin: 1em 0; // 上下の余白
-  display: inline-block; // インラインブロック要素に
+  font-family: 'DotGothic16', cursive; /* ピクセルフォントを適用 */
+  background: #fff; /* 背景色を白に設定 */
+  border: 3px solid #ff79c6; /* ピンク色のボーダーを設定 */
+  padding: 0.5em; /* 内側の余白を設定 */
+  border-radius: 0.5em; /* 角を丸める */
+  box-shadow: 3px 3px #ccc; /* 影を付ける */
+  margin: 1em 0; /* 上下の余白を設定 */
+  display: inline-block; /* インラインブロック要素として配置 */
 }
 
 .search-form input[type="text"] {
-  border: 2px solid #ff79c6; // 入力欄のボーダー
-  background: #f9f9f9; // 入力欄の背景色
-  color: #333; // テキストの色
-  padding: 0.5em; // 内側の余白
-  border-radius: 0.5em; // 角を丸く
+  border: 2px solid #ff79c6; /* 入力欄のボーダーをピンクに設定 */
+  background: #f9f9f9; /* 入力欄の背景色を設定 */
+  color: #333; /* テキストの色を設定 */
+  padding: 0.5em; /* 内側の余白を設定 */
+  border-radius: 0.5em; /* 角を丸める */
 }
 
-.search-form input[type="submit"] {
-  font-family: 'Press Start 2P', sans-serif;
-  background: #ff79c6; // ボタンの背景色
-  color: #fff; // ボタンのテキスト色
-  padding: 0.5em 1em; // 内側の余白
-  border: none; // ボーダーなし
-  border-radius: 0.5em; // 角を丸く
-  box-shadow: 2px 2px #ccc; // 影をつける
-  cursor: pointer; // ホバー時のカーソルを指に
+/* 検索ボタンのスタイル */
+.search-button {
+  font-family: 'DotGothic16', cursive; /* ピクセルフォントを適用 */
+  background-color: #ff79c6; /* ボタンの背景色をピンクに設定 */
+  color: white; /* テキストの色を白に設定 */
+  padding: 0.5em 1em; /* 内側の余白を設定 */
+  border: none; /* ボーダーを無くす */
+  border-radius: 0.5em; /* 角を丸める */
+  box-shadow: 2px 2px #ccc; /* 影を付ける */
+  cursor: pointer; /* ホバー時のカーソルを指に変更 */
+  transition: background-color 0.3s ease; /* 背景色の変更を滑らかに */
+  text-transform: uppercase; /* テキストを大文字に変更 */
+  font-size: 16px; /* フォントサイズを設定 */
+  letter-spacing: 1px; /* 文字間のスペースを設定 */
+  display: inline-block; /* インラインブロック要素として配置 */
+  margin: 0; /* マージンを設定 */
+  width: auto; /* 幅を自動調整 */
 }
 
-// レスポンシブ対応
-@media (max-width: 768px) {
-  .search-form {
-    margin: 0.5em;
-    padding: 0.5em;
-  }
-
-  .search-form input[type="text"],
-  .search-form input[type="submit"] {
-    padding: 0.5em;
-  }
+.search-button:hover {
+  background-color: #ff92d0; /* ホバー時の背景色を明るいピンクに変更 */
+  box-shadow: 3px 3px #bbb; /* ホバー時の影を変更 */
 }
 
 @media (max-width: 768px) {
