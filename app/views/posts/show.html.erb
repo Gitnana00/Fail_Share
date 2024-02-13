@@ -24,23 +24,9 @@
             </div>
           </div>
 
-          <!-- コメント一覧 -->
           <div class="comments-section">
-            <h2>コメント</h2>
-            <!-- コメントが表示されます -->
-            <% @post.comments.each do |comment| %>
-              <div class="card mb-2">
-                <div class="card-body">
-                  <p class="card-text"><%= comment.content %></p>
-                  <p class="card-text"><small class="text-muted">Commented by <%= comment.user.email %> on <%= comment.created_at.strftime("%B %d, %Y") %></small></p>
-                </div>
-              </div>
-            <% end %>
-          </div>
-
-          <!-- コメントフォーム -->
-          <!-- ここにコメントフォームが追加されます -->
-
+            <%= render 'comments/comments', { comments: @comments } %>
+            <%= render 'comments/form', { post: @post, comment: @comment } %>
         </div>
       </div>
     </div>

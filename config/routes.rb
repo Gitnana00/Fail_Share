@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :posts, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
+    resources :comments, only: [:create], shallow: true
     collection do
       get :search
     end

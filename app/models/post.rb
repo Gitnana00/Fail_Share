@@ -1,10 +1,10 @@
 class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
   belongs_to :user
-  has_many :comments
-  has_many :likes
-  has_many :images
-  has_many :post_tags
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :images, dependent: :destroy
+  has_many :post_tags, dependent: :destroy
   has_many :tags, through: :post_tags
 
   validates :title, presence: true, length: { maximum: 255 }
