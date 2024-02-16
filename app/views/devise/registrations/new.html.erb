@@ -1,11 +1,13 @@
 <div class="flex-container">
   <div class="signup-content">
     <h2 class="signup-title">Sign up</h2>
+    <div class="video-background">
+      <video autoplay muted loop id="signup-video">
+        <source src="<%= asset_path('signup_background.mp4') %>" type="video/mp4">
+        お使いのブラウザはビデオをサポートしていません。
+      </video>
+    </div>
 
-    <video autoplay muted loop id="signup-video">
-      <source src="<%= asset_path('signup_background.mp4') %>" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'signup-form' }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>

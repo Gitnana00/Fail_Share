@@ -2,9 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    # Ransackの検索オブジェクトを作成
     @q = Post.ransack(params[:q])
-    # 検索結果を取得し、作成日時の降順で並び替える
     @posts = @q.result.includes(:user).order(created_at: :desc)
   end
 

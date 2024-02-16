@@ -182,18 +182,20 @@
 
 .posts {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(3, 1fr); 
   gap: 50px;
   padding: 70px;
   max-width: 1600px; 
 }
 
 .post {
-  padding: 20px;
+  padding: 30px;
   background-color: #f0f0f0;
   border: 2px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 7.5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2); 
+  transition: transform 0.3s ease;
 }
 
 .post h3 {
