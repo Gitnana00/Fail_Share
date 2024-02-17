@@ -1,23 +1,11 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: %i[new create edit update destroy]
 
   def index
     @q = Post.ransack(params[:q])
     @posts = @q.result.includes(:user).order(created_at: :desc)
-  end
-
-  def new
-    @post = Post.new
-  end
-
-  def create
-    @post = current_user.posts.build(post_params)
-    if @post.save
-      redirect_to @post, notice: '投稿が作成されたよ！'
-    else
-      puts @post.errors.full_messages
-      render :new
-    end
   end
 
   def show
@@ -26,14 +14,28 @@ class PostsController < ApplicationController
     @comment = Comment.new
   end
 
+  def new
+    @post = Post.new
+  end
+
   def edit
     @post = Post.find(params[:id])
+  end
+
+  def create
+    @post = current_user.posts.build(post_params)
+    if @post.save
+      redirect_to @post, notice: t('posts.created')
+    else
+      Rails logger.info @post.errors.full_messages
+      render :new
+    end
   end
 
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to @post, notice: '更新完了だよ！'
+      redirect_to @post, notice: t('posts.updated')
     else
       render :edit
     end
@@ -42,7 +44,7 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post.destroy!
-    redirect_to posts_path, notice: '削除完了だよ！', status: :see_other
+    redirect_to posts_path, notice: t('posts.deleted'), status: :see_other
   end
 
   def search
@@ -55,6 +57,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, :image, :private, :anonymous, :tag_ids => [])
+    params.require(:post).permit(:title, :content, :image, :private, :anonymous, tag_ids: [])
   end
 end
