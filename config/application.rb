@@ -1,6 +1,8 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -11,7 +13,7 @@ module App
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
     config.time_zone = 'Tokyo'
-    config.autoload_paths += %W(#{config.root}/app/uploaders)
+    config.autoload_paths += %W[#{config.root}/app/uploaders]
 
     # Configuration for the application, engines, and railties goes here.
     #
