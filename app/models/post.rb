@@ -15,7 +15,6 @@ class Post < ApplicationRecord
   validates :anonymous, inclusion: { in: [true, false] }
 
   def self.ransackable_attributes(_auth_object = nil)
-    # 検索に含めたい属性を配列で指定する
     %w[title content created_at updated_at tags_id user_id]
   end
 end
