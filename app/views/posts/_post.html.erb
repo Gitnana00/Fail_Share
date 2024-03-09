@@ -12,7 +12,7 @@
     <p>投稿者: <%= post.user.email %></p>
   <% end %>
 
-  <% if post.public_private %>
+  <% if post.private %>
     <p>非公開</p>
   <% else %>
     <p>公開</p>
