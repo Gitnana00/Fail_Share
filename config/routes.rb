@@ -1,6 +1,7 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
+  get 'users/show'
+  get 'users/edit'
+  get 'users/update'
   root to: 'posts#index'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+
+  resources :users, only: [:show, :edit, :update]
 
   resources :posts, only: %i[index new create show edit update destroy] do
     resources :comments, only: [:create], shallow: true

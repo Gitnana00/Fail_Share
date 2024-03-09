@@ -1,12 +1,14 @@
 ja:
-  comments:
-    added: "コメントが追加されました。"
-    add_failure: "コメントの追加に失敗しました。コメントを入力してください。"
-  posts:
-    created: "投稿が作成されたよ！"
-    updated: "更新完了だよ！"
-    deleted: "削除完了だよ！"
   sessions:
     login_success: "ログイン成功！"
     login_failure: "ログイン失敗！"
     logged_out: "ログアウトしました。"
+  users:
+    profile_updated: "プロフィールが更新されました。"
+  posts:
+    created: "投稿が作成されたよ！"
+    updated: "更新完了だよ！"
+    deleted: "削除完了だよ！"
+  comments:
+    added: "コメントが追加されました。"
+    add_failure: "コメントの追加に失敗しました。コメントを入力してください。"

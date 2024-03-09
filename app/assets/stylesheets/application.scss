@@ -6,11 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: auto; /* ビューポートの高さに合わせる */
-  position: relative; /* 動画を正しく配置するための相対位置指定 */
-  z-index: 1; /* 動画より上に配置 */
-  background-color: #f8f8f8; /* コンテナの背景色を薄いグレーに設定 */
-  margin-top: -50px; /* 上に50px移動させる */
+  min-height: auto;
+  position: relative; 
+  z-index: 1;
+  background-color: #f8f8f8;
+  margin-top: -50px;
   overflow-y: auto;
   padding-top: 120px;
   padding-bottom: 100px;
@@ -21,72 +21,64 @@
   height: 100vh;
   object-fit: cover;
 }
-/* フォームコンテンツスタイル */
 .signup-content, .login-content {
-  padding: 30px; /* パディングを増やす */
-  border-radius: 15px; /* 角を丸くする */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を強調 */
-  max-width: 500px; /* 最大幅を大きくする */
-  z-index: 2; /* 動画より前面に配置 */
-  margin: auto; /* 中央揃え */
-  background-color: #fff; /* フォームの背景色を白に設定 */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  z-index: 2;
+  margin: auto;
+  background-color: #fff;
 }
 
 /* タイトルスタイル */
 .signup-title, .login-title {
-  color: #ff79c6; /* ピンクのタイトル */
+  color: #ff79c6;
   text-align: center;
-  font-family: 'Press Start 2P', cursive; /* ピクセルフォント */
-  font-size: 25px; /* タイトルのフォントサイズを大きく */
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
 }
 
-/* 入力フィールドスタイル */
 .input {
   width: 100%;
-  padding: 15px; /* パディングを増やす */
-  border-radius: 5px; /* 角を少し丸くする */
-  border: 2px solid #ccc; /* ボーダーを太く */
-  font-family: 'DotGothic16', cursive; /* ピクセルフォント */
-  font-size: 16px; /* フォントサイズを大きく */
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-family: 'DotGothic16', cursive;
+  font-size: 16px;
 }
 
-/* パスワード長さヒントスタイル */
 .password-length {
-  font-family: 'Press Start 2P', cursive; /* ピクセルフォント */
-  color: #719bad;
-  font-size: 10px; /* サイズを小さく */
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
 }
 
-/* フィールドスタイル */
 .field {
-  margin-bottom: 20px; /* マージンを増やす */
+  margin-bottom: 20px;
 }
 
-/* ラベルスタイル */
 .label {
-  font-family: 'Press Start 2P', cursive; /* ピクセルフォント */
+  font-family: 'Press Start 2P', cursive;
   color: #0073a8;
-  font-size: 16px; /* フォントサイズを大きく */
+  font-size: 16px;
 }
 
-/* ボタンスタイル */
 .signup-button, .login-button {
-  font-family: 'Press Start 2P', cursive; /* ピクセルフォント */
+  font-family: 'Press Start 2P', cursive;
   background-color: #ff79c6;
   color: white;
-  border: 2px solid black; /* ピクセル風のボーダー */
-  border-radius: 0; /* 角を丸くしない */
+  border: 2px solid black;
+  border-radius: 0;
   padding: 8px 16px;
-  text-transform: uppercase; /* 大文字に変換 */
-  font-size: 16px; /* 小さめのフォントサイズ */
+  text-transform: uppercase;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease; /* スムーズなホバーエフェクト */
+  transition: all 0.3s ease;
 }
 
-/* ホバー時のボタンスタイル */
 .signup-button:hover, .login-button:hover {
-  background-color: #ff92d0; /* 明るいピンク */
-  transform: scale(1.1); /* 少し大きく */
+  background-color: #ff92d0;
+  transform: scale(1.1);
 }
 
 .game-header {
@@ -96,7 +88,7 @@
   color: #ff79c6;
   width: 100%;
   box-sizing: border-box;
-  z-index: 10; /* 他の要素より前に表示 */
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -111,7 +103,7 @@
 .header-logo a {
   color: #ff79c6;
   text-decoration: none;
-  font-size: 2rem; /* ロゴのフォントサイズを調整 */
+  font-size: 2rem;
   font-family: 'Press Start 2P'
 }
 
@@ -126,7 +118,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   border: 2px solid #ff79c6;
-  font-size: 1rem; /* ナビゲーションリンクのフォントサイズを調整 */
+  font-size: 1rem;
 }
 
 .header-nav a:hover {
@@ -180,6 +172,15 @@
   overflow: hidden;
 }
 
+.post-form-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .posts {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
@@ -194,7 +195,6 @@
   border: 2px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 3px 7.5px rgba(0, 0, 0, 0.1);
-  transform: scale(1.2); 
   transition: transform 0.3s ease;
 }
 
@@ -230,129 +230,166 @@
   text-align: right;
 }
 
-/* 全体のフォントと背景 */
 body {
   font-family: 'DotGothic16', sans-serif;
-  background-color: #f8f8f8; /* 薄いグレーの背景 */
+  background-color: #f8f8f8;
 }
 
-/* カードスタイルのカスタマイズ */
 .card {
   max-width: 200%;
-  border-radius: 1rem; /* 角を丸くする */
-  border: none; /* ボーダーを消す */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* やわらかい影 */
-  overflow: hidden; /* はみ出した画像を隠す */
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .card-img-top {
-  height: 600px; /* 画像の高さを固定 */
-  object-fit: cover; /* 画像がカードの幅に合うようにする */
+  height: 600px;
+  object-fit: cover;
   width: 100%;
 }
 
 .card-body {
   padding: 2rem;
-  background-color: #fff; /* 白い背景 */
+  background-color: #fff;
 }
 
 .card-title {
   font-size: 2rem;
-  color: #ff79c6; /* タイトルをピンク色に */
+  color: #ff79c6;
   font-family: 'DotGothic16', cursive;
 }
 
 .card-text {
   font-size: 1.25rem;
-  color: #333; /* 濃いテキストカラー */
+  color: #333;
 }
 
 .text-muted {
-  color: #719bad; /* 薄いテキストカラー */
+  color: #719bad;
 }
 
-/* コメントセクション */
 .comments-section h2 {
   font-family: 'DotGothic16', cursive;
-  color: #ff79c6; /* セクションタイトルをピンク色に */
+  color: #ff79c6;
 }
 
-/* コメントカード */
 .comments-section .card {
-  margin-bottom: 1rem; /* 下余白を設定 */
-  background-color: #ffeff6; /* コメントの背景をパステルピンクに */
+  margin-bottom: 1rem;
+  background-color: #ffeff6; 
 }
 
 .comments-section .card-body {
-  border-radius: 0.5rem; /* コメントの角を丸くする */
+  border-radius: 0.5rem;
 }
 
-/* コメントフォームスタイル */
-/* 以下にフォームスタイルを追加する場合の例 */
 .comment-form {
-  margin-top: 2rem; /* コメントフォームの上余白 */
+  margin-top: 2rem;
 }
 
 .comment-form input,
 .comment-form textarea {
-  border-radius: 0.5rem; /* フォームの要素の角を丸くする */
-  border: 2px solid #ff79c6; /* ボーダーをピンクに */
+  border-radius: 0.5rem;
+  border: 2px solid #ff79c6;
 }
 
 .comment-form button {
-  background-color: #ff79c6; /* 送信ボタンをピンクに */
-  color: white; /* ボタンテキストを白に */
-  border-radius: 0.5rem; /* ボタンの角を丸くする */
-  padding: 0.5rem 1rem; /* ボタンのパディング */
-  border: none; /* ボーダーを消す */
+  background-color: #ff79c6; 
+  color: white;
+  border-radius: 0.5rem; 
+  padding: 0.5rem 1rem;
+  border: none;
 }
 
 .comment-form button:hover {
-  background-color: #ff92d0; /* ホバー時のボタン色を明るいピンクに */
+  background-color: #ff92d0;
 }
 
-/* 検索フォームのスタイル */
 .search-form {
-  font-family: 'DotGothic16', cursive; /* ピクセルフォントを適用 */
-  background: #fff; /* 背景色を白に設定 */
-  border: 3px solid #ff79c6; /* ピンク色のボーダーを設定 */
-  padding: 0.5em; /* 内側の余白を設定 */
-  border-radius: 0.5em; /* 角を丸める */
-  box-shadow: 3px 3px #ccc; /* 影を付ける */
-  margin: 1em 0; /* 上下の余白を設定 */
-  display: inline-block; /* インラインブロック要素として配置 */
+  font-family: 'DotGothic16', cursive;
+  background: #fff;
+  border: 3px solid #ff79c6;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  box-shadow: 3px 3px #ccc;
+  margin: 1em 0;
+  display: inline-block;
 }
 
 .search-form input[type="text"] {
-  border: 2px solid #ff79c6; /* 入力欄のボーダーをピンクに設定 */
-  background: #f9f9f9; /* 入力欄の背景色を設定 */
-  color: #333; /* テキストの色を設定 */
-  padding: 0.5em; /* 内側の余白を設定 */
-  border-radius: 0.5em; /* 角を丸める */
+  border: 2px solid #ff79c6;
+  background: #f9f9f9;
+  color: #333;
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
 
-/* 検索ボタンのスタイル */
 .search-button {
-  font-family: 'DotGothic16', cursive; /* ピクセルフォントを適用 */
-  background-color: #ff79c6; /* ボタンの背景色をピンクに設定 */
-  color: white; /* テキストの色を白に設定 */
-  padding: 0.5em 1em; /* 内側の余白を設定 */
-  border: none; /* ボーダーを無くす */
-  border-radius: 0.5em; /* 角を丸める */
-  box-shadow: 2px 2px #ccc; /* 影を付ける */
-  cursor: pointer; /* ホバー時のカーソルを指に変更 */
-  transition: background-color 0.3s ease; /* 背景色の変更を滑らかに */
-  text-transform: uppercase; /* テキストを大文字に変更 */
-  font-size: 16px; /* フォントサイズを設定 */
-  letter-spacing: 1px; /* 文字間のスペースを設定 */
-  display: inline-block; /* インラインブロック要素として配置 */
-  margin: 0; /* マージンを設定 */
-  width: auto; /* 幅を自動調整 */
+  font-family: 'DotGothic16', cursive;
+  background-color: #ff79c6;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 0;
+  width: auto;
 }
 
 .search-button:hover {
-  background-color: #ff92d0; /* ホバー時の背景色を明るいピンクに変更 */
-  box-shadow: 3px 3px #bbb; /* ホバー時の影を変更 */
+  background-color: #ff92d0;
+  box-shadow: 3px 3px #bbb; 
+}
+
+.user-profile-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-profile {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'DotGothic16', sans-serif;
+  color: #ff79c6;
+  background-color: #f0f0f0;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name, .user-email {
+  font-size: 28px;
+  color: #0073a8;
+}
+
+.user-profile-image {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.user-profile-image img {
+  max-width: 150px;
+  height: auto;
+  object-fit: cover;
+  border: 6px solid #ff79c6;
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
