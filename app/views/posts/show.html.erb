@@ -10,7 +10,6 @@
       <div class="row">
         <div class="col-md-12">
 
-          <!-- 投稿詳細カード -->
           <div class="card mb-4">
             <h2></h2>
             <% if @post.image.present? %>
@@ -20,10 +19,15 @@
               <h1 class="card-title"><%= @post.title %></h1>
               <p class="card-text"><%= @post.content %></p>
 
-              <p class="card-text"><small class="text-muted">Posted by <%= @post.user.email %> on <%= @post.created_at.strftime("%B %d, %Y") %></small></p>
+              <% if current_user == @post.user %>
+                <%= link_to '編集', edit_post_path(@post), class: 'btn btn-sm btn-primary' %>
+                <%= link_to '削除', post_path(@post), "data-turbo-method": :delete, "data-turbo-confirm": '本当に削除する？', class: 'btn btn-sm btn-danger' %>
+              <% end %>
+
               <%= link_to "https://twitter.com/share?url=#{ request.url }&text=【Fail Share】%0a%0a#{ @post.content } ", target: '_blank' do %>
                 <i class="fab fa-twitter" style='color: #3399FF;'></i>Xで共有
-                <% end %>
+              <% end %>
+              <p class="card-text"><small class="text-muted">Posted by <%= @post.user.email %> on <%= @post.created_at.strftime("%B %d, %Y") %></small></p>
             </div>
           </div>
 

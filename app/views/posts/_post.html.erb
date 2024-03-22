@@ -23,6 +23,8 @@
   <% end %>
 
   <% if current_user == post.user %>
-    <%= link_to '削除', post_path(post), "data-turbo-method": :delete, "data-turbo-confirm": '本当に削除する？', class: 'delete-button' %>
+    <%= link_to '編集', edit_post_path(post), class: 'btn btn-sm btn-primary' %>
+    <%= link_to '削除', post_path(post), "data-turbo-method": :delete, "data-turbo-confirm": '本当に削除する？', class: 'btn btn-sm btn-danger' %>
   <% end %>
 </div>
+
