@@ -1,11 +1,8 @@
-# frozen_string_literal: true
-
 class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_many :images, dependent: :destroy
   has_many :post_tags, dependent: :destroy
   has_many :tags, through: :post_tags
 
@@ -15,6 +12,10 @@ class Post < ApplicationRecord
   validates :anonymous, inclusion: { in: [true, false] }
 
   def self.ransackable_attributes(_auth_object = nil)
-    %w[title content created_at updated_at tags_id user_id]
+    %w[title content created_at updated_at user_id]
+  end
+
+  def liked?(user)
+    likes.where(user_id: user.id).exists?
   end
 end

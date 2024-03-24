@@ -1,0 +1,9 @@
+<%= form_with(model: comment, local: true) do |form| %>
+  <div class="field">
+    <%= form.text_area :content, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "コメントを更新", class: 'btn btn-primary' %>
+  </div>
+<% end %>

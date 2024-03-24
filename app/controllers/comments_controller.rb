@@ -18,7 +18,8 @@ class CommentsController < ApplicationController
   def edit
     @comment = Comment.find(params[:id])
     respond_to do |format|
-      format.js
+      format.turbo_stream
+      format.html
     end
   end
   

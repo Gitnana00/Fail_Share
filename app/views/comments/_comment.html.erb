@@ -1,10 +1,12 @@
-<div class="card mb-2">
-  <div class="card-body">
-    <p class="card-text"><%= comment.content %></p>
-    <p class="card-text"><small class="text-muted">Commented by <%= comment.user.email %> on <%= comment.created_at.strftime("%B %d, %Y") %></small></p>
-  <% if current_user == comment.user %>
-    <%= link_to '編集', edit_comment_path(comment), class: 'btn btn-sm btn-primary', remote: true %>
-    <%= link_to '削除', comment_path(comment), method: :delete, data: { confirm: '本当に削除する？' }, class: 'btn btn-sm btn-danger' %>
-  <% end %>
+<turbo-frame id="comment_<%= comment.id %>">
+  <div class="card mb-2">
+    <div class="card-body">
+      <p class="card-text"><%= comment.content %></p>
+      <p class="card-text"><small class="text-muted">Commented by <%= comment.user.email %> on <%= comment.created_at.strftime("%B %d, %Y") %></small></p>
+      <% if current_user == comment.user %>
+        <%= link_to '編集', edit_comment_path(comment), class: 'btn btn-sm btn-primary', data: { turbo_frame: "comment_#{comment.id}" } %>
+        <%= link_to '削除', comment_path(comment), data: { turbo_confirm: '本当に削除する？', turbo_method: :delete }, class: 'btn btn-sm btn-danger' %>
+      <% end %>
+    </div>
   </div>
-</div>
+</turbo-frame>

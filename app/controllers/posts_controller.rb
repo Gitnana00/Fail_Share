@@ -51,9 +51,14 @@ class PostsController < ApplicationController
     render partial: 'posts/search_results', locals: { posts: @posts }
   end
 
+  def likes
+    @like_posts = current_user.like_posts.includes(:user).order(created_at)
+  end
+
+  end
+
   private
 
   def post_params
     params.require(:post).permit(:title, :content, :image, :private, :anonymous, tag_ids: [])
   end
-end

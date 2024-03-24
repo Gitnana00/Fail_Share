@@ -4,13 +4,19 @@ ja:
     login_failure: "ログイン失敗！"
     logged_out: "ログアウトしました。"
   users:
-    profile_updated: "プロフィールが更新されました。"
+    profile_updated: "プロフィールが更新されたよ！"
   posts:
     created: "投稿が作成されたよ！"
     updated: "更新完了だよ！"
     deleted: "削除完了だよ！"
   comments:
-    added: "コメントが追加されました。"
-    add_failure: "コメントの追加に失敗しました。コメントを入力してください。"
+    added: "コメントが追加されたよ！"
+    add_failure: "コメントを入力してね！"
     updated: "コメントが更新されました。"
     destroyed: "コメントが削除されました。"
+  likes:
+    create:
+      error: "いいね失敗！"
+    destroy:
+      error: "いいねの解除が失敗したよ！"
+
