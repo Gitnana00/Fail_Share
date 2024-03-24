@@ -190,24 +190,25 @@
 }
 
 .post {
-  padding: 30px;
+  padding: 50px;
   background-color: #f0f0f0;
   border: 2px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 3px 7.5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .post h3 {
   font-family: 'DotGothic16', sans-serif;
   color: #ff79c6;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .post p {
   font-family: 'DotGothic16', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #333;
   line-height: 1.4;
 }

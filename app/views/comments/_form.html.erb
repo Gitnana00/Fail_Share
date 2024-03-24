@@ -2,7 +2,7 @@
   <div class="col-lg-8 offset-lg-2">
     <%= form_with model: [ @post, @comment ], local: true do |f| %>
       <%= f.text_area :content, class: 'form-control mb-3', id: 'js-new-comment-body', rows: 4, placeholder: 'コメントをどうぞ...' %>
-      <%= f.submit '投稿', class: 'btn btn-primary' %>
+      <%= f.submit 'コメントする', class: 'btn btn-primary' %>
     <% end %>
   </div>
 </div>
