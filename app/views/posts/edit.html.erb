@@ -1,7 +1,16 @@
-<%= form_with(model: @post, local: true) do |form| %>
+<div class="flex-container">
+  <div class="post-form-content">
+    <div class="video-background">
+      <video autoplay muted loop id="post-form-video">
+        <source src="<%= asset_path('board_index_background.mp4') %>" type="video/mp4">
+        お使いのブラウザはビデオをサポートしていません。
+      </video>
+    </div>
+
+<%= form_with(model: @post, local: true, html: { class: "post-form-content" }) do |form| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(@post.errors.count, "エラー") %> がこの投稿の保存を阻止しました:</h2>
 
       <ul>
       <% @post.errors.full_messages.each do |message| %>
@@ -12,18 +21,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title %>
+    <%= form.label :title, class: "label" %>
+    <%= form.text_field :title, id: :post_title, class: "input" %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, id: :post_content %>
+    <%= form.label :content, class: "label" %>
+    <%= form.text_area :content, id: :post_content, class: "input" %>
   </div>
   
   <div class="actions">
-    <%= form.submit "Save" %>
+    <%= form.submit "保存", class: "footer-link" %>
+    <%= link_to '戻る', posts_path, class: "footer-link" %>
   </div>
 <% end %>
 
-<%= link_to 'Back', posts_path %>
