@@ -9,7 +9,7 @@
   <% if post.anonymous %>
     <p>投稿者: 匿名</p>
   <% else %>
-    <p>投稿者: <%= post.user.email %></p>
+    <p>投稿者: <%= post.user.name %></p>
   <% end %>
 
   <% if post.private %>
