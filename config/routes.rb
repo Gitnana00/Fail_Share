@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'users/show'
   get 'users/edit'
   get 'users/update'
-  root to: 'posts#index'
+  root to: 'pages#home'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
