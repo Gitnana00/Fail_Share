@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @q = Post.ransack(params[:q])
-    @posts = @q.result.includes(:user).order(created_at: :desc)
+    @posts = @q.result.includes(:user).order(created_at: :desc).page(params[:page]).per(9)
   end
 
   def show
