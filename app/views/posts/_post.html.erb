@@ -4,18 +4,11 @@
   <% end %>
 
   <h3><%= link_to post.title, post_path(post), class: 'post-title' %></h3>
-  <%# <p><%= post.content %></p>
 
   <% if post.anonymous %>
     <p>投稿者: 匿名</p>
   <% else %>
     <p>投稿者: <%= post.user.name %></p>
-  <% end %>
-
-  <% if post.private %>
-    <p>非公開</p>
-  <% else %>
-    <p>公開</p>
   <% end %>
 
   <% if post.tags_id.present? %>

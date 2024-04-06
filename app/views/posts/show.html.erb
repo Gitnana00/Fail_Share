@@ -24,7 +24,7 @@
                 <%= link_to '削除', post_path(@post), "data-turbo-method": :delete, "data-turbo-confirm": '本当に削除する？', class: 'btn btn-sm btn-danger' %>
               <% end %>
 
-              <%= link_to "https://twitter.com/share?url=#{ request.url }&text=【Fail Share】%0a%0a#{ @post.content } ", target: '_blank' do %>
+              <%= link_to "https://twitter.com/share?url=#{ request.url }&text=【Fail Share】%0a%0a#{ @post.title } ", target: '_blank' do %>
                 <i class="fab fa-twitter" style='color: #3399FF;'></i>Xで共有
               <% end %>
 

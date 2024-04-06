@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @q = Post.ransack(params[:q])
-    @posts = @q.result.includes(:user).order(created_at: :desc).page(params[:page]).per(9)
+    @posts = @q.result.includes(:user).order(created_at: :desc)
   end
 
   def show
@@ -62,3 +62,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :content, :image, :private, :anonymous, tag_ids: [])
   end
+  
