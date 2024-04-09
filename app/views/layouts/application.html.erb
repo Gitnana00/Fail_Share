@@ -9,6 +9,11 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
     <%= javascript_importmap_tags %>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'File_Share' %>" />
+    <meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : 'デフォルトの説明文' %>" />
+    <meta property="og:image" content="<%= content_for?(:og_image) ? yield(:og_image) : asset_url('OGP画像.webp') %>" />
   </head>
 
   <body>

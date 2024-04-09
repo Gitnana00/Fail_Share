@@ -1,6 +1,7 @@
 @import 'bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import "simple_calendar";
 
 .flex-container {
   display: flex;
@@ -126,6 +127,14 @@
   border-color: #ffffff;
   color: #ffffff;
   transform: scale(1.1);
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav.hidden {
+  display: none;
 }
 
 .game-footer {
@@ -393,7 +402,26 @@ body {
   border-radius: 50%;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  .header-nav {
+    display: none; /* 画面幅が768px以下の場合は非表示 */
+  }
+
+  .header-nav:not(.hidden) {
+    display: flex; /* ハンバーガーメニューがクリックされた時に表示 */
+    flex-direction: column; /* 項目を縦に並べる */
+    position: absolute; /* ナビゲーションをヘッダーの上に重ねる */
+    top: 100%; /* ヘッダーの下に配置 */
+    left: 0;
+    width: 100%; /* 幅をヘッダーと同じにする */
+    background-color: #fff; /* 背景色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影をつける */
+  }
+
   .posts {
     grid-template-columns: repeat(2, 1fr);
   }

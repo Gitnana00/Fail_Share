@@ -32,6 +32,7 @@ gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
+gem 'simple_calendar'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -63,7 +64,6 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
 gem 'ransack'
-gem 'kaminari'
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'

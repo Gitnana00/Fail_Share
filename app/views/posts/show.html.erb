@@ -1,3 +1,9 @@
+<% content_for :title, @post.title %>
+<% content_for :description, @post.content.truncate(100) %>
+<% if @post.image.present? %>
+  <% content_for :og_image, url_for(@post.image) %>
+<% end %>
+
 <div class="flex-container">
     <div class="video-background">
       <video autoplay muted loop id="post-form-video">
@@ -24,8 +30,10 @@
                 <%= link_to '削除', post_path(@post), "data-turbo-method": :delete, "data-turbo-confirm": '本当に削除する？', class: 'btn btn-sm btn-danger' %>
               <% end %>
 
-              <%= link_to "https://twitter.com/share?url=#{ request.url }&text=【Fail Share】%0a%0a#{ @post.title } ", target: '_blank' do %>
-                <i class="fab fa-twitter" style='color: #3399FF;'></i>Xで共有
+              <% if current_user == @post.user %>
+                <%= link_to "https://twitter.com/share?url=#{ request.url }&text=【Fail Share】%0a%0a#{ @post.title } ", target: '_blank' do %>
+                  <i class="fab fa-twitter" style='color: #3399FF;'></i>Xで共有
+                <% end %>
               <% end %>
 
               <p class="card-text"><small class="text-muted">Posted by <%= @post.user.name %> on <%= @post.created_at.strftime("%B %d, %Y") %></small></p>
