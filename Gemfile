@@ -17,7 +17,7 @@ gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
-gem 'devise'
+gem 'devise', '4.9.3'
 gem 'mini_magick'
 gem 'puma', '~> 5.0'
 
@@ -49,9 +49,11 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 gem 'bootstrap', '~> 5.1.3'
-gem 'rubocop', '~> 1.59', require: false
+gem 'rubocop', '1.63.0', require: false
 gem 'rubocop-capybara', require: false
 gem 'rubocop-rails', require: false
+gem 'kaminari'
+gem 'nokogiri', '1.16.3'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

@@ -18,6 +18,10 @@
     <div class="posts">
       <%= render partial: "posts/post", collection: @posts %>
     </div>
+
+    <div class="pagination">
+      <%= paginate @posts %>
+    </div>
   </div>
 </div>
 
