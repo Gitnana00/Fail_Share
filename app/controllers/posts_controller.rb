@@ -41,6 +41,7 @@ class PostsController < ApplicationController
 
   def destroy
     post = Post.find(params[:id])
+    byebug
     post.destroy!
     redirect_to posts_path, notice: t('posts.deleted'), status: :see_other
   end

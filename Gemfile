@@ -20,6 +20,7 @@ gem 'carrierwave'
 gem 'devise', '4.9.3'
 gem 'mini_magick'
 gem 'puma', '~> 5.0'
+gem "simple_calendar", "~> 2.4"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
@@ -32,7 +33,6 @@ gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
-gem 'simple_calendar'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -64,6 +64,7 @@ gem 'nokogiri', '1.16.3'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 gem 'ransack'
 group :development do
