@@ -406,6 +406,74 @@ body {
   display: none;
 }
 
+.calendar-container {
+  justify-content: center;
+  align-items: center;
+  width: 200%; /* カレンダーの幅を2倍に設定 */
+  overflow-x: auto; /* カレンダーがはみ出たときに横スクロール可能に */
+}
+
+.simple-calendar {
+  font-family: 'DotGothic16', sans-serif; /* DotGothic16フォントを適用 */
+  color: #333;
+  background-color: #fff; /* 白背景 */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* シャドウを追加 */
+  border-radius: 8px; /* 角を丸める */
+  padding: 40px; /* 内部の余白 */
+  margin-top: 40px; /* 上部のマージン */
+}
+
+.calendar-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px; /* タイトル下のマージン */
+}
+
+.calendar-heading a {
+  color: #0073a8; /* リンクの色 */
+  text-decoration: none; /* アンダーラインを非表示 */
+  background-color: #ff79c6; /* バックグラウンドカラー */
+  padding: 16px 32px; /* パディング */
+  border-radius: 8px; /* 角を丸める */
+  font-weight: bold;
+  transition: background-color 0.3s; /* 背景色の変化を滑らかに */
+}
+
+.calendar-heading a:hover {
+  background-color: #ff92d0; /* ホバー時の背景色 */
+}
+
+.calendar-title {
+  font-size: 24px; /* タイトルのフォントサイズ */
+  color: #ff79c6; /* タイトルの色 */
+}
+
+.table {
+  width: 100%; /* テーブルの幅 */
+  border-collapse: collapse; /* セルの境界線を統合 */
+}
+
+th, td {
+  text-align: center;
+  padding: 20px 10px; /* セルのパディング */
+  border-bottom: 2px solid #ddd; /* 下境界線 */
+}
+
+th {
+  background-color: #0073a8; /* ヘッダーの背景色 */
+  color: #fff; /* ヘッダーのテキスト色 */
+  font-size: 16px; /* ヘッダーのフォントサイズ */
+  padding: 10px; /* セルのパディング */
+  text-align: center;
+}
+
+td {
+  background-color: #f0f0f0; /* セルの背景色 */
+  padding: 10px; /* セルのパディング */
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .header-nav {
     display: none; /* 画面幅が768px以下の場合は非表示 */
@@ -420,6 +488,10 @@ body {
     width: 100%; /* 幅をヘッダーと同じにする */
     background-color: #fff; /* 背景色 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影をつける */
+
+  .calendar-heading span {
+    font-size: 20px; 
+  }
   }
 
   .posts {
