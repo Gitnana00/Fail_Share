@@ -15,6 +15,8 @@ module App
     config.time_zone = 'Tokyo'
     config.i18n.default_locale = :ja
     config.autoload_paths += %W[#{config.root}/app/uploaders]
+    config.beginning_of_week = :monday
+    config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.yml').to_s]
 
     # Configuration for the application, engines, and railties goes here.
     #

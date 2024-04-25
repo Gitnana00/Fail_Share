@@ -54,6 +54,7 @@ gem 'rubocop-capybara', require: false
 gem 'rubocop-rails', require: false
 gem 'kaminari'
 gem 'nokogiri', '1.16.3'
+gem 'pry-rails'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
