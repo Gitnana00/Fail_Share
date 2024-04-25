@@ -15,21 +15,13 @@
       <p class="user-email">メール: <%= @user.email %></p>
     </div>
   </div>
-    <div class="calendar-container"> 
-    <%= month_calendar do |date| %>
-      <% if date == date.beginning_of_month %>
-        <tr>
-          <% %w(Sun Mon Tue Wed Thu Fri Sat).each do |day| %>
-            <th><%= day %></th>
-          <% end %>
-        </tr>
+    <div class="calendar-container">
+      <%= turbo_frame_tag 'calendar' do %>
+        <%= month_calendar do |date| %>
+          <%= date.day %></td>
+        <% end %>
       <% end %>
-
-      <tr>
-        <td><%= date.day %></td>
-      </tr>
-    <% end %>
+    </div>
   </div>
-</div>
 </div>
 
