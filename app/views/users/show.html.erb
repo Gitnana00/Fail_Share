@@ -16,11 +16,9 @@
     </div>
   </div>
     <div class="calendar-container">
-      <%= turbo_frame_tag 'calendar' do %>
         <%= month_calendar do |date| %>
           <%= date.day %></td>
         <% end %>
-      <% end %>
     </div>
   </div>
 </div>

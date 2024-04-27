@@ -8,11 +8,12 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <% date_range.slice(0, 7).each do |day| %>
-          <th><%= t('date.abbr_day_names')[day.wday] %></th>
+        <% (0..6).each do |wday| %>
+          <th><%= t('date.abbr_day_names')[wday] %></th>
         <% end %>
       </tr>
     </thead>
+
     <tbody>
       <% date_range.each_slice(7) do |week| %>
         <tr>
