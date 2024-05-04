@@ -23,7 +23,7 @@
             <% end %>
             <div class="card-body">
               <h1 class="card-title"><%= @post.title %></h1>
-              <%= simple_format(@post.content, class: "card-text") %>
+              <%= markdown_to_html(@post.content) %>
 
               <% if current_user == @post.user %>
                 <%= link_to '編集', edit_post_path(@post), class: 'btn btn-sm btn-primary' %>
@@ -38,10 +38,6 @@
 
               <p class="card-text"><small class="text-muted">Posted by <%= @post.user.name %> on <%= @post.created_at.strftime("%B %d, %Y") %></small></p>
             </div>
-          </div>
-
-          <div class="blog-content">
-            <%= markdown(@blog.content) %>
           </div>
 
           <div class="comments-section">

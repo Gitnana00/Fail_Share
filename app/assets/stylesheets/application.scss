@@ -475,6 +475,15 @@ td {
   text-align: center;
 }
 
+pre, code {
+  background-color:  #eec0e8;
+  border: 1px solid #ccc; 
+  padding: 1px; 
+  border-radius: 3px; 
+  overflow-x: auto; 
+}
+
+
 @media (max-width: 768px) {
   .header-nav {
     display: none; 
