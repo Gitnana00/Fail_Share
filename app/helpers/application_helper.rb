@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include MarkdownHelper
   def flash_class(message_type)
     case message_type.to_sym
     when :notice

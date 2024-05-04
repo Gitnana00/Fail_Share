@@ -40,6 +40,10 @@
             </div>
           </div>
 
+          <div class="blog-content">
+            <%= markdown(@blog.content) %>
+          </div>
+
           <div class="comments-section">
             <%= render 'comments/comments', { comments: @comments } %>
             <%= render 'comments/form', { post: @post, comment: @comment } %>
