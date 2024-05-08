@@ -305,6 +305,10 @@ Devise.setup do |config|
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other
 
+Devise.setup do |config|
+  config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET'], scope: 'user,public_repo'
+end
+
   # ==> Configuration for :registerable
 
   # When set to false, does not sign a user in automatically after their password is

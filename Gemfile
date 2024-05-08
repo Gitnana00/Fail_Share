@@ -56,6 +56,9 @@ gem 'kaminari'
 gem 'nokogiri', '1.16.3'
 gem 'pry-rails'
 gem 'redcarpet'
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
