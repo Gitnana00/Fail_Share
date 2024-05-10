@@ -26,6 +26,7 @@
 !/tmp/storage/.keep
 
 /public/assets
+/config/initializers/devise.rb
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
@@ -35,5 +36,6 @@ node_modules/
 *.o
 *.out
 .DS_Store
+.env
 Thumbs.db
 public/uploads/
