@@ -306,7 +306,7 @@ Devise.setup do |config|
   config.responder.redirect_status = :see_other
 
 Devise.setup do |config|
-  config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET'], scope: 'user,public_repo'
+  config.omniauth :github, ENV['Ov23lipOoOuMEgdQLKF4'], ENV['bfed35c29c829b210f411fe43cf54c0ad9718410'], scope: 'user public_repo'
 end
 
   # ==> Configuration for :registerable
