@@ -61,6 +61,7 @@ gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'dotenv-rails'
+gem 'mini_racer'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

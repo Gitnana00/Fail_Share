@@ -158,6 +158,11 @@ GEM
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
     language_server-protocol (3.17.0.3)
+    libv8-node (21.7.2.0)
+    libv8-node (21.7.2.0-aarch64-linux)
+    libv8-node (21.7.2.0-arm64-darwin)
+    libv8-node (21.7.2.0-x86_64-darwin)
+    libv8-node (21.7.2.0-x86_64-linux)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -171,6 +176,8 @@ GEM
     method_source (1.1.0)
     mini_magick (4.12.0)
     mini_mime (1.1.5)
+    mini_racer (0.12.0)
+      libv8-node (~> 21.7.2.0)
     minitest (5.22.3)
     msgpack (1.7.2)
     multi_xml (0.7.1)
@@ -397,6 +404,7 @@ DEPENDENCIES
   jbuilder
   kaminari
   mini_magick
+  mini_racer
   nokogiri (= 1.16.3)
   omniauth
   omniauth-github
