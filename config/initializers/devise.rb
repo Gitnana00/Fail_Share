@@ -305,9 +305,11 @@ Devise.setup do |config|
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other
 
-Devise.setup do |config|
-  config.omniauth :github, ENV['Ov23lipOoOuMEgdQLKF4'], ENV['bfed35c29c829b210f411fe43cf54c0ad9718410'], scope: 'user public_repo'
-end
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], {
+    scope: 'userinfo.email,userinfo.profile',
+    prompt: 'select_account'
+  }
+  OmniAuth.config.logger = Rails.logger if Rails.env.development?
 
   # ==> Configuration for :registerable
 
