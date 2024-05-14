@@ -58,7 +58,9 @@ gem 'pry-rails'
 gem 'redcarpet'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
+gem 'dotenv-rails'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
