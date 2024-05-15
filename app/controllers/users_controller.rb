@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def show
+    @user = User.find(params[:id])
+    
     start_date = Date.parse(params.fetch(:start_date, Date.today.to_s))
     @start_date = start_date.beginning_of_month
     @end_date = @start_date.end_of_month

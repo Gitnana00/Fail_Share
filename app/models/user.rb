@@ -14,5 +14,9 @@ class User < ApplicationRecord
     end
   end
 
+  def update_level!
+    self.level = (posts.count / 10) + 1
+    save
+  end
 end
 

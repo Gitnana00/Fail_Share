@@ -18,4 +18,8 @@ class Post < ApplicationRecord
   def liked?(user)
     likes.where(user_id: user.id).exists?
   end
+
+  def update_user_level
+    user.update_level!
+  end
 end
