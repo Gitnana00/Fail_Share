@@ -14,7 +14,13 @@
       <p class="user-name">名前: <%= @user.name %></p>
       <p class="user-email">メール: <%= @user.email %></p>
       <p class="user-level">Level: <%= @user.level %></p>
+      <div class="level-up-gauge">
+        <% 5.times do |i| %>
+          <div class="gauge-block <%= 'filled' if i < (@user.posts.count % 5) %>"></div>
+        <% end %>
+      </div>
     </div>
+
   </div>
     <div class="calendar-container">
         <%= month_calendar do |date| %>

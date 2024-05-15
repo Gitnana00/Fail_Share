@@ -483,6 +483,22 @@ pre, code {
   overflow-x: auto; 
 }
 
+.level-up-gauge {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.gauge-block {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc; /* 空のブロックの色 */
+  border: 1px solid #000; /* ドット絵風にするための枠線 */
+}
+
+.gauge-block.filled {
+  background-color: #00ff00; /* 埋められたブロックの色 */
+}
 
 @media (max-width: 768px) {
   .header-nav {
