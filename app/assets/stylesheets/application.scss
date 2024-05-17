@@ -32,7 +32,6 @@
   background-color: #fff;
 }
 
-/* タイトルスタイル */
 .signup-title, .login-title {
   color: #ff79c6;
   text-align: center;
@@ -181,7 +180,7 @@
   overflow: hidden;
 }
 
-.post-form-content {
+.post-form-content, .user-form-content {
   position: relative;
   z-index: 2;
   padding: 20px;

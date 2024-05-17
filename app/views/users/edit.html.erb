@@ -1,17 +1,25 @@
-<%= form_with(model: @user, local: true) do |form| %>
-  <div>
-    <%= form.label :name, "名前" %>
-    <%= form.text_field :name %>
-  </div>
-  <div>
-    <%= form.label :email, "メール" %>
-    <%= form.email_field :email %>
-  </div>
-  <div>
-    <%= form.label :profile_image, "プロフィール画像" %>
-    <%= form.text_field :profile_image %>
-  </div>
-  <div>
-    <%= form.submit "更新" %>
-  </div>
-<% end %>
+<div class="flex-container">
+  <div class="user-form-content">
+    <div class="video-background">
+      <video autoplay muted loop id="post-form-video">
+        <source src="<%= asset_path('board_index_background.mp4') %>" type="video/mp4">
+        お使いのブラウザはビデオをサポートしていません。
+      </video>
+    </div>
+
+      <%= form_with(model: @user, local: true) do |form| %>
+        <div>
+          <%= form.label :name, "name", class: "label" %>
+          <%= form.text_field :name %>
+        </div>
+        <div>
+          <%= form.label :email, "email", class: "label"  %>
+          <%= form.email_field :email %>
+        </div>
+
+        <div>
+          <%= form.submit "更新", class: 'btn btn-sm btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+</div>

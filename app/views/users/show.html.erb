@@ -7,18 +7,19 @@
     </video>
   </div>
   <div class="user-profile">
-    <div class="user-profile-image">
-    <%= image_tag(@user.profile_image) if @user.profile_image.present? %>
-    </div>
     <div class="user-info">
-      <p class="user-name">名前: <%= @user.name %></p>
-      <p class="user-email">メール: <%= @user.email %></p>
+      <p class="user-name">name: <%= @user.name %></p>
+      <p class="user-email">email: <%= @user.email %></p>
       <p class="user-level">Level: <%= @user.level %></p>
       <div class="level-up-gauge">
         <% 5.times do |i| %>
           <div class="gauge-block <%= 'filled' if i < (@user.posts.count % 5) %>"></div>
         <% end %>
       </div>
+
+      <% if current_user == @user %>
+        <%= link_to '編集', edit_user_path(@user), class: 'btn btn-sm btn-primary' %>
+      <% end %>
     </div>
 
   </div>
