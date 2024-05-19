@@ -499,6 +499,44 @@ pre, code {
   background-color: #00ff00; /* 埋められたブロックの色 */
 }
 
+/* app/assets/stylesheets/application.css */
+
+/* ページネーションスタイル */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  background-color: #ff79c6;
+  color: white;
+  border: 2px solid black;
+  border-radius: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.pagination .page-link:hover {
+  background-color: #ff92d0;
+  transform: scale(1.1);
+}
+
+.pagination .active .page-link {
+  background-color: #0073a8;
+  color: #ff79c6;
+}
+
 @media (max-width: 768px) {
   .header-nav {
     display: none; 
